@@ -1,0 +1,13 @@
+:host {
+    padding-left: 280px;
+    display: block;
+}
+
+app-sidebar {
+    position: fixed;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    background-color: #fefefe;
+    width: 280px;
+}

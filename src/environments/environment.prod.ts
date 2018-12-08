@@ -1,3 +1,5 @@
 export const environment = {
-  production: true
+  production: true,
+  API: "https://api.acrnm.pro/api",
+  TOKEN: "access_token"
 };
