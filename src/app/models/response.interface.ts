@@ -4,6 +4,6 @@ export interface IResponse<T> {
 }
 
 export interface IMeta {
-    message?: string;
-    total?: number;
+    title?: string;
+    description?: string;
 }

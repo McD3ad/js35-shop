@@ -15,6 +15,8 @@ import { CartComponent } from './front/cart/cart.component';
 import { ProductComponent } from './front/product/product.component';
 import { FrontComponent } from './front/front.component';
 import { RoleGuard } from './guards/role/role.guard';
+import { PagesService } from './services/pages/pages.service';
+import { ProductCardComponent } from './front/product-card/product-card.component';
 
 const tokenGetter = TokenService.getAuthToken;
 
@@ -26,6 +28,7 @@ const tokenGetter = TokenService.getAuthToken;
     CartComponent,
     ProductComponent,
     FrontComponent,
+    ProductCardComponent,
   ],
   imports: [
     BrowserModule,
@@ -41,6 +44,7 @@ const tokenGetter = TokenService.getAuthToken;
     AuthGuard,
     RoleGuard,
     TokenService,
+    PagesService,
     {
       provide: HTTP_INTERCEPTORS,
       useClass: ApiInterceptor,

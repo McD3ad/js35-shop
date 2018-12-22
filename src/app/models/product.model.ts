@@ -3,8 +3,8 @@ export class Product {
     title: string;
     description: string;
     price: string;
-    preview: string;
-    images: string[];
+    computed_price: string;
+    image: string;
     discount?: boolean;
     categories: Category[];
 }

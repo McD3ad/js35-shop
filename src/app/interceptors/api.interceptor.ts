@@ -25,11 +25,10 @@ export class ApiInterceptor implements HttpInterceptor {
                             });
                         } else {
                             newEvent = event.clone({
-                                // body: {
-                                //     data: event.body.data,
-                                //     meta: event.body.meta
-                                // }
-                                body: event.body.data
+                                body: {
+                                    data: event.body.data,
+                                    meta: event.body.meta
+                                }
                             });
                         }
                     }
