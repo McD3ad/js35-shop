@@ -1,6 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { JwtModule } from '@auth0/angular-jwt';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -17,6 +18,7 @@ import { FrontComponent } from './front/front.component';
 import { RoleGuard } from './guards/role/role.guard';
 import { PagesService } from './services/pages/pages.service';
 import { ProductCardComponent } from './front/product-card/product-card.component';
+import { MaterialModule } from './material/material.module';
 
 const tokenGetter = TokenService.getAuthToken;
 
@@ -34,6 +36,8 @@ const tokenGetter = TokenService.getAuthToken;
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
+    MaterialModule,
+    BrowserAnimationsModule,
     JwtModule.forRoot({
       config: {
         tokenGetter

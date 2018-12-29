@@ -1,1 +1,19 @@
-@import '~bootstrap/scss/bootstrap';
+@import 
+"~normalize.css", 
+"~@angular/material/prebuilt-themes/indigo-pink.css";
+
+.full-width {
+    width: 100%;
+}
+
+.ml-auto {
+    margin-left: auto;
+}
+
+.ml-2 {
+    margin-left: 10px !important;
+}
+
+.mt-4 {
+    margin-top: 20px !important;
+}

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { Router, NavigationEnd } from '@angular/router';
+import { filter } from 'rxjs/operators';
+import { JwtHelperService } from '@auth0/angular-jwt';
 
 @Component({
   selector: 'app-root',
@@ -7,9 +9,15 @@ import { ActivatedRoute } from '@angular/router';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent implements OnInit {
-  constructor(private route: ActivatedRoute) {}
+
+  isAuth: boolean;
+
+  constructor(private router: Router, private jwt: JwtHelperService) { }
 
   ngOnInit() {
-    //
+    this.router.events
+      .pipe(
+        filter(event => event instanceof NavigationEnd)
+      ).subscribe(() => this.isAuth = !this.jwt.isTokenExpired());
   }
 }
