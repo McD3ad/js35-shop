@@ -19,6 +19,7 @@ import { RoleGuard } from './guards/role/role.guard';
 import { PagesService } from './services/pages/pages.service';
 import { ProductCardComponent } from './front/product-card/product-card.component';
 import { MaterialModule } from './material/material.module';
+import { HeaderComponent } from './layout/header/header.component';
 
 const tokenGetter = TokenService.getAuthToken;
 
@@ -31,6 +32,7 @@ const tokenGetter = TokenService.getAuthToken;
     ProductComponent,
     FrontComponent,
     ProductCardComponent,
+    HeaderComponent,
   ],
   imports: [
     BrowserModule,

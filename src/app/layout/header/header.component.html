@@ -1,0 +1,15 @@
+<mat-toolbar [@openClose]="isOpen ? 'open' : 'closed'">
+    <div>
+        <a routerLink="/" mat-raised-button color="primary">Home</a>
+    </div>
+    <div class="ml-auto">
+        <ng-container *ngIf="!isAuth">
+            <a [routerLink]="['auth', 'login']" mat-raised-button color="warn">Login</a>
+            <a [routerLink]="['auth', 'register']" mat-raised-button class="ml-2">Register</a>
+        </ng-container>
+        <ng-container *ngIf="isAuth">
+            <a [routerLink]="['profile']" mat-raised-button color="warn">Profile</a>
+            <a [routerLink]="['auth', 'logout']" mat-raised-button class="ml-2">Logout</a>
+        </ng-container>
+    </div>
+</mat-toolbar>
